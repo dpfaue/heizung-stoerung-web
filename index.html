@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Heizung zeigt Fehlercode? Hilfe vom Heizungsfachmann | Heizung-Störung.de</title>
-<meta name="description" content="Fehlercode an Therme oder Heizung (z. B. Vaillant F.28, Buderus 6A, Junkers EA)? Foto schicken – ein Heizungsfachmann sagt dir, was los ist, was du selbst sicher tun kannst und wann ein Monteur nötig ist. Ab 9,99 €.">
+<meta name="description" content="Fehlercode an Therme oder Heizung (z. B. Vaillant F.28, Buderus 6A, Junkers EA)? Foto schicken – ein Heizungsfachmann sagt dir, was los ist, was du selbst sicher tun kannst und wann ein Monteur nötig ist. Persönliche Auskunft 14,90 €.">
 <meta name="robots" content="noindex,nofollow"><!-- ENTWURF: vor Livegang entfernen -->
 <link rel="canonical" href="https://heizung-stoerung.de/">
 <link rel="icon" type="image/png" href="favicon-64.png">
@@ -133,50 +133,208 @@
   .mail-a p{margin:0 0 8px;}
   .gaswarn{background:rgba(255,93,93,.08);border:1px solid rgba(255,93,93,.5);border-radius:var(--radius);padding:14px 16px;margin:0 0 22px;font-size:14.5px;color:#ffd0d0}
   .gaswarn b{color:#fff}
-  .usp{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:0 0 20px;}
-  .usp span{background:rgba(255,255,255,.06);border:1px solid var(--border);border-radius:999px;padding:6px 12px;font-size:13.5px;font-weight:600;}
-  .sec-link{color:var(--text-dim);font-size:14px;}
-  #beispiel{padding:36px 0 8px;}
-  .mail{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;text-align:left;}
-  .mail-q{padding:14px 16px;background:var(--bg-alt);color:var(--text-dim);font-size:14px;border-bottom:1px solid var(--border);}
-  .mail-a{padding:14px 16px;font-size:14.5px;}
-  .mail-a p{margin:0 0 8px;}
-  .codes{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
-  .codes a{background:var(--card);border:1px solid var(--border);border-radius:999px;padding:7px 12px;font-size:14px;text-decoration:none;color:var(--text)}
+  
+  .topbar{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+  .topbar a.small{color:var(--text-dim);font-size:14px;text-decoration:none}
+  header.hero{padding:26px 0 36px}
+  .check{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:20px;max-width:620px;margin:0 auto;text-align:left}
+  .check label{display:block;font-size:13.5px;font-weight:600;margin-bottom:6px;color:var(--text-dim)}
+  .check-row{display:grid;grid-template-columns:1fr 1fr auto;gap:10px;align-items:end}
+  .check select,.check input{width:100%;background:var(--bg-alt);border:1px solid var(--border);border-radius:10px;color:var(--text);padding:12px 13px;font-size:16px;font-family:inherit}
+  .check .cta-btn{padding:12px 22px;font-size:16px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+  .chips button{background:var(--bg-alt);border:1px solid var(--border);border-radius:999px;padding:7px 12px;font-size:14px;color:var(--text);cursor:pointer;font-family:inherit}
+  .result{display:none;max-width:620px;margin:16px auto 0;text-align:left;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:20px}
+  .result h3{margin:4px 0 6px;font-size:20px}
+  .result p{margin:0 0 10px;color:#d3d7e0}
+  .result ul{margin:4px 0 12px;padding-left:20px;color:#c7cbd6;font-size:15px}
+  .result li{margin-bottom:5px}
+  .result h4{margin:14px 0 4px;font-size:15px}
+  .ampel{display:inline-block;font-size:13px;font-weight:700;border-radius:999px;padding:4px 11px}
+  .ampel.gruen{background:rgba(62,207,142,.12);color:#3ecf8e;border:1px solid rgba(62,207,142,.4)}
+  .ampel.gelb{background:rgba(255,196,0,.1);color:#ffc400;border:1px solid rgba(255,196,0,.4)}
+  .ampel.rot{background:rgba(255,90,90,.1);color:#ff8a8a;border:1px solid rgba(255,90,90,.45)}
+  .result .cta-box{background:rgba(255,106,26,.08);border:1px solid rgba(255,106,26,.45);border-radius:12px;padding:14px 16px;margin-top:14px}
+  .result .cta-box p{margin:0 0 10px}
+  .offer{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .offer .card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:20px}
+  .offer .card h3{margin:0 0 6px;font-size:18px}
+  .offer .card p{margin:0;color:var(--text-dim);font-size:14.5px}
+  .pricebox{margin-top:16px;background:var(--card);border:1px solid var(--accent);border-radius:var(--radius);padding:18px 20px;display:flex;flex-wrap:wrap;gap:12px 28px;align-items:center;justify-content:space-between}
+  .pricebox .p{font-size:30px;font-weight:800}
+  .pricebox ul{margin:0;padding-left:18px;color:var(--text-dim);font-size:14.5px}
+  .anliegen{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .anliegen button{background:var(--bg-alt);border:1.5px solid var(--border);border-radius:10px;color:var(--text);padding:13px 10px;cursor:pointer;font-family:inherit;font-size:15px;text-align:center}
+  .anliegen button b{display:block}
+  .anliegen button span{display:block;font-size:12.5px;color:var(--text-dim);margin-top:2px}
+  .anliegen button.selected{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent);background:rgba(255,106,26,.08)}
+  .field.need .anliegen{outline:2px solid #a33;outline-offset:4px;border-radius:10px}
+  .field select{width:100%;background:var(--bg-alt);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:11px 13px;font-size:15px;font-family:inherit}
+  @media (max-width:760px){.topbar a.small{display:none}.check-row{grid-template-columns:1fr 1fr}.check-row .go{grid-column:1/-1}.offer,.anliegen{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
 
 <header class="hero">
   <div class="wrap">
-    <div class="logo">Heizung-<span>Störung</span>.de</div>
-    <div id="statusBadge" class="status-badge"><span class="dot"></span><span id="statusText">Status wird geprüft…</span></div>
-    <h1>Heizung zeigt einen Fehler?<br>Ein Heizungsfachmann sagt dir, was los ist.</h1>
-    <p class="sub">Foto vom Display und Typenschild schicken – du erfährst, was der Code bedeutet, was du selbst sicher tun kannst und ob wirklich ein Monteur kommen muss. Im Express-Paket zusätzlich mit Ersatzteil, Teilenummer und Kostenrahmen.</p>
-    <div class="usp">
-      <span>💶 ab 9,99 €</span><span>🔧 vom SHK-Kundendienst-Profi</span><span>✅ Geld zurück, wenn wir nicht helfen können</span>
-    </div>
-    <a href="#anfrage" class="cta-btn">Jetzt Fehler prüfen lassen</a>
+    <div class="topbar"><div class="logo">Heizung-<span>Störung</span>.de</div><a class="small" href="#anfrage">Persönlich fragen</a></div>
+    <h1>Heizung zeigt einen Fehler?</h1>
+    <p class="sub">Foto vom Display und Typenschild schicken – ein Heizungsfachmann sagt dir, was der Fehler bedeutet, was du selbst sicher tun kannst und welches Ersatzteil passt.</p>
+    <div class="usp"><span>💶 14,90 € pro Anfrage</span><span>🔧 vom SHK-Kundendienst-Profi</span><span>⏱ Antwort in 24 Std.</span><span>✅ Geld zurück, wenn wir nicht helfen können</span></div>
+    <a href="#anfrage" class="cta-btn">Jetzt Fehler klären lassen</a>
     <div style="margin-top:12px;"><a href="#beispiel" class="sec-link">So sieht eine Antwort aus ↓</a></div>
+    <div class="gaswarn" style="max-width:620px;margin:18px auto 0;text-align:left">⚠️ <b>Riecht es nach Gas?</b> Kein Licht- oder Klingelschalter betätigen, Fenster öffnen, Gebäude verlassen und von draußen die <b>Störungsnummer deines Gasnetzbetreibers</b> oder <b>112</b> anrufen.</div>
   </div>
 </header>
 
+<section id="angebot">
+  <div class="wrap">
+    <h2>Persönliche Auskunft vom Heizungsfachmann</h2>
+    <p class="lead">Du schickst Fotos von Display und Typenschild und beschreibst kurz, was los ist. Ein SHK-Kundendiensttechniker schaut sich deinen Fall an und antwortet dir schriftlich per E-Mail.</p>
+    <div class="offer">
+      <div class="card"><h3>🔥 Störung klären</h3><p>Was der Fehler bei deinem Gerät bedeutet, wie wahrscheinlich welche Ursache ist, was du gefahrlos selbst tun kannst und was du dem Monteur sagst.</p></div>
+      <div class="card"><h3>🔩 Ersatzteil bestimmen</h3><p>Welches Teil zu deinem Gerät passt – mit Teilenummer, wo verfügbar – damit der Monteur gleich das Richtige mitbringt oder du es bestellen kannst.</p></div>
+    </div>
+    <div class="pricebox">
+      <div><div class="p"><span class="js-preis">14,90</span>&nbsp;€</div><div style="color:var(--text-dim);font-size:13px">Endpreis, gem. §&nbsp;19 UStG ohne USt.</div></div>
+      <ul>
+        <li>Antwort innerhalb von 24 Stunden (Servicezeit 8–20 Uhr)</li>
+        <li>Keine Registrierung, kein Abo, Zahlung per PayPal</li>
+        <li>Können wir nicht helfen: Geld zurück</li>
+      </ul>
+      <a href="#anfrage" class="cta-btn">Jetzt anfragen</a>
+    </div>
+  </div>
+</section>
+
 <section id="beispiel">
   <div class="wrap">
-    <div class="gaswarn">⚠️ <b>Riecht es nach Gas?</b> Dann bitte <b>keine Anfrage hier</b>: kein Licht- oder Klingelschalter betätigen, Fenster öffnen, Gebäude verlassen und von draußen die <b>Störungsnummer deines Gasnetzbetreibers</b> oder <b>112</b> anrufen.</div>
     <h2>So sieht eine Antwort aus</h2>
     <div class="mail">
       <div class="mail-q"><strong>Anfrage:</strong> Vaillant ecoTEC plus, Display zeigt <b>F.28</b>, Heizung und Warmwasser bleiben kalt. Druck 1,5 bar.</div>
       <div class="mail-a">
-        <p><strong>Antwort (Paket Express):</strong></p>
         <p>• <b>Bedeutung:</b> F.28 heißt „Zündung beim Start erfolglos“ – die Therme hat beim Anlauf keine Flamme erkannt und sich aus Sicherheitsgründen abgeschaltet.</p>
         <p>• <b>Das kannst du sicher selbst prüfen:</b> Ist der Gashahn unter dem Gerät offen? Funktionieren andere Gasgeräte (z. B. Herd)? Wurde kürzlich der Gaszähler getauscht? Danach einmal die Entstörtaste drücken.</p>
         <p>• <b>Kommt F.28 wieder:</b> Dann bitte den Fachbetrieb rufen. Häufige Ursachen bei diesem Gerät: verschlissene oder verschmutzte Zünd-/Überwachungselektrode, verstopfter Kondensatablauf, seltener die Gasarmatur. Sag dem Monteur „F.28 nach Entstörung wiederholt“ – das spart Suchzeit.</p>
-        <p>• <b>Ersatzteil:</b> passende Elektrode mit Teilenummer für dein Gerät + grober Kostenrahmen.</p>
+        <p>• <b>Ersatzteil:</b> passende Elektrode mit Teilenummer für dein Gerät.</p>
       </div>
     </div>
-    <p class="lead" style="margin-top:12px;font-size:13.5px;">Beispiel zur Veranschaulichung. Jede Antwort wird persönlich für dein Gerät geprüft. Arbeiten an der Gasanlage gehören immer in die Hand eines Fachbetriebs – wir sagen dir nur, was du gefahrlos selbst tun kannst.</p>
-    <p style="margin:18px 0 6px;font-weight:600">Häufige Fehlercodes:</p>
+    <p class="lead" style="margin-top:12px;font-size:13.5px;">Beispiel zur Veranschaulichung. Jede Antwort wird persönlich für dein Gerät erstellt. Arbeiten an der Gasanlage gehören immer in die Hand eines Fachbetriebs – wir sagen dir nur, was du laut Bedienungsanleitung selbst tun darfst.</p>
+  </div>
+</section>
+
+<section id="anfrage">
+  <div class="wrap">
+    <h2>Persönlich anfragen</h2>
+    <p class="lead">Je genauer die Angaben und Fotos, desto genauer die Antwort. Dauert etwa 3 Minuten.</p>
+
+    <div id="errorBox"></div>
+
+    <form id="reqform" novalidate>
+      <div id="stage1">
+        <div class="field" id="anliegenField">
+          <label>Worum geht es? *</label>
+          <div class="anliegen" role="radiogroup" aria-label="Anliegen">
+            <button type="button" data-a="stoerung" role="radio" aria-checked="false"><b>🔥 Störung klären</b><span>Fehlercode oder Problem</span></button>
+            <button type="button" data-a="ersatzteil" role="radio" aria-checked="false"><b>🔩 Ersatzteil bestimmen</b><span>passendes Teil + Nummer</span></button>
+          </div>
+        </div>
+
+        <div class="grid2">
+          <div class="field">
+            <label for="f_brand">Hersteller *</label>
+            <select id="f_brand" required>
+              <option value="">bitte wählen</option>
+              <option>Vaillant</option><option>Buderus</option><option>Junkers / Bosch</option><option>Viessmann</option>
+              <option>Wolf</option><option>Brötje</option><option>anderer Hersteller</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="f_model">Gerät / Typ <span class="hint">(steht auf dem Typenschild)</span></label>
+            <input type="text" id="f_model" placeholder="z. B. ecoTEC plus VC 206/5-5">
+          </div>
+        </div>
+
+        <div class="grid2">
+          <div class="field">
+            <label for="f_vin" id="codeLabel">Fehlercode im Display</label>
+            <input type="text" id="f_vin" maxlength="30" placeholder="z. B. F.28 – oder leer lassen" autocapitalize="characters" spellcheck="false">
+          </div>
+          <div class="field">
+            <label for="f_engine">Anlagendruck <span class="hint">(Manometer, falls ablesbar)</span></label>
+            <input type="text" id="f_engine" placeholder="z. B. 1,2 bar">
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="f_problem" id="problemLabel">Was passiert genau? *</label>
+          <textarea id="f_problem" required placeholder="Seit wann? Heizung und/oder Warmwasser betroffen? Geräusche? Schon die Entstörtaste gedrückt?"></textarea>
+        </div>
+
+        <div class="field">
+          <label>Fotos * <span class="hint">(Display und Typenschild des Geräts – max. 3)</span></label>
+          <div class="file-drop" id="fileDrop" role="button" tabindex="0">📷 Fotos auswählen</div>
+          <input type="file" id="photoInput" accept="image/*" multiple>
+          <div class="thumbs" id="thumbs"></div>
+          <div class="photo-note" id="photoNote"></div>
+        </div>
+
+        <div class="grid2">
+          <div class="field">
+            <label for="f_name">Name *</label>
+            <input type="text" id="f_name" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="f_email">E-Mail für die Antwort *</label>
+            <input type="email" id="f_email" autocomplete="email" required>
+          </div>
+        </div>
+
+        <label class="ack-check">
+          <input type="checkbox" id="f_nogas" required>
+          <span>Es riecht <b>nicht</b> nach Gas. (Bei Gasgeruch sofort die Störungsnummer deines Gasnetzbetreibers oder 112 anrufen.) *</span>
+        </label>
+
+        <div class="disclaimer">
+          Die Auskunft erfolgt nach bestem Wissen anhand deiner Angaben und Fotos. Sie ersetzt keine Prüfung vor Ort durch einen Fachbetrieb und ist keine Reparaturanleitung. Arbeiten an Gasgeräten und an der Gasanlage dürfen nur eingetragene Fachbetriebe ausführen – wir nennen dir nur Schritte, die laut Bedienungsanleitung für Nutzer vorgesehen sind.<br><br>
+          <strong>Geld zurück:</strong> Können wir anhand deiner Angaben nicht weiterhelfen (z.&nbsp;B. weil der Fall zu speziell ist), bekommst du den vollen Betrag zurück.
+        </div>
+
+        <label class="ack-check">
+          <input type="checkbox" id="f_ack" required>
+          <span>Ich habe den Hinweis oben und die <a href="agb.html" target="_blank" rel="noopener">AGB</a> gelesen. *</span>
+        </label>
+
+        <label class="ack-check">
+          <input type="checkbox" id="f_widerruf" required>
+          <span>Ich verlange ausdrücklich, dass mit der Bearbeitung vor Ablauf der Widerrufsfrist begonnen wird. Mir ist bekannt, dass mein Widerrufsrecht erlischt, sobald die Auskunft vollständig erbracht ist (<a href="widerruf.html" target="_blank" rel="noopener">Widerrufsbelehrung</a>). *</span>
+        </label>
+
+        <button type="button" id="toStage2" class="cta-btn" style="width:100%">Weiter zur Zahlung (<span class="js-preis">14,90</span>&nbsp;€)</button>
+      </div>
+
+      <div id="stage2">
+        <div class="sum">Persönliche Auskunft — <strong><span class="js-preis">14,90</span>&nbsp;€</strong></div>
+        <p class="s2-note">Endpreis, gem. §&nbsp;19 UStG ohne Umsatzsteuer. Mit Klick auf <strong>„Jetzt kaufen“</strong> bestellst du die Auskunft zahlungspflichtig. Du bekommst direkt danach eine Bestätigung per E-Mail. Auf deinem PayPal-Beleg steht als Empfänger <strong>DP Digital-Service</strong>.</p>
+        <div id="paypal-btn-container"></div>
+        <div class="back-link" id="backToForm">← zurück zum Formular</div>
+      </div>
+    </form>
+
+    <div id="confirmation">
+      <h3>✅ Zahlung erhalten, Anfrage ist eingegangen</h3>
+      <p id="confirmText"></p>
+      <p style="color:var(--text-dim);font-size:13px">
+        Eine Bestätigung geht gleich an deine E-Mail-Adresse (bitte auch im Spam-Ordner schauen).
+        Falls du innerhalb der Frist nichts hörst, schreib uns kurz mit deiner Transaktions-ID.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="codes">
+  <div class="wrap">
+    <h2>Häufige Fehlercodes</h2>
     <div class="codes">
       <a href="vaillant-f28.html">Vaillant F.28</a><a href="vaillant-f29.html">Vaillant F.29</a><a href="vaillant-f22.html">Vaillant F.22</a><a href="vaillant-f75.html">Vaillant F.75</a>
       <a href="buderus-6a.html">Buderus 6A</a><a href="junkers-ea.html">Junkers EA</a><a href="viessmann-f4.html">Viessmann F4</a>
@@ -185,453 +343,14 @@
   </div>
 </section>
 
-<section id="ablauf">
-  <div class="wrap">
-    <h2>So läuft's ab</h2>
-    <p class="lead">Drei Schritte, keine Registrierung, keine Warteschleife.</p>
-    <div class="steps">
-      <div class="step"><div class="num">1</div><h3>Fehler schicken</h3>
-        <p>Foto vom Display und vom Typenschild, Hersteller/Gerät und kurz beschreiben, was passiert.</p></div>
-      <div class="step"><div class="num">2</div><h3>Paket wählen &amp; zahlen</h3>
-        <p>Sicher per PayPal direkt auf dieser Seite. Können wir nicht weiterhelfen, bekommst du dein Geld zurück.</p></div>
-      <div class="step"><div class="num">3</div><h3>Antwort erhalten</h3>
-        <p>Bedeutung, was du selbst sicher tun kannst und wann ein Monteur nötig ist – im Express-Paket mit Ersatzteil und Teilenummer. Per E-Mail.</p></div>
-    </div>
-    <p class="lead" style="margin-top:20px;font-size:13.5px;">
-      ⏱ Servicezeiten: <strong style="color:var(--text)">8:00–20:00 Uhr</strong>. Antwortfristen gelten innerhalb dieses Fensters – Anfragen nachts zählen ab 8:00 Uhr.
-    </p>
-  </div>
-</section>
-
-<section id="pakete">
-  <div class="wrap">
-    <h2>Pakete</h2>
-    <p class="lead">Alle Preise sind Endpreise (gem. §&nbsp;19 UStG keine Umsatzsteuer). Das Paket kannst du hier oder direkt im Formular wählen.</p>
-    <div class="pricing" id="pricingCards">
-      <label class="plan" data-plan="basis" data-price="9.99">
-        <input type="radio" name="planRadio" value="basis">
-        <span class="badge">Basis</span>
-        <h3>Basis</h3>
-        <div class="price">9,99&nbsp;€ <small>Antwort in 24 Std.</small></div>
-        <ul>
-          <li>Bedeutung des Fehlercodes für dein Gerät</li>
-          <li>Was du selbst sicher tun kannst</li>
-          <li>Wann ein Fachbetrieb nötig ist</li>
-        </ul>
-      </label>
-      <label class="plan featured" data-plan="express" data-price="19.99">
-        <div class="flag">Schnell</div>
-        <input type="radio" name="planRadio" value="express">
-        <span class="badge">Express</span>
-        <h3>Express</h3>
-        <div class="price">19,99&nbsp;€ <small>Antwort in 2 Std.</small></div>
-        <ul>
-          <li>Alles aus Basis</li>
-          <li>Wahrscheinliche Ursache + Ersatzteil mit Teilenummer</li>
-          <li>Grober Kostenrahmen &amp; was du dem Monteur sagst</li>
-          <li>Antwort innerhalb von 2 Stunden (Servicezeit 8–20 Uhr)</li>
-        </ul>
-      </label>
-    </div>
-  </div>
-</section>
-
-<section id="anfrage">
-  <div class="wrap">
-    <h2>Fehler prüfen lassen</h2>
-    <p class="lead">Je genauer die Angaben, desto genauer die Antwort.</p>
-
-    <div id="errorBox"></div>
-
-    <form id="reqform">
-      <div id="stage1">
-        <div class="field" id="planField">
-          <label>Paket wählen *</label>
-          <div class="plan-picker" id="planPicker" role="radiogroup" aria-label="Paket">
-            <button type="button" class="pp" data-plan="basis" role="radio" aria-checked="false"><b>Basis</b><span>9,99&nbsp;€<br>24 Std.</span></button>
-            <button type="button" class="pp" data-plan="express" role="radio" aria-checked="false"><b>Express</b><span>19,99&nbsp;€<br>2&nbsp;Std.</span></button>
-          </div>
-        </div>
-
-        <div class="grid2">
-          <div class="field">
-            <label>Name *</label>
-            <input type="text" id="f_name" autocomplete="name" required>
-          </div>
-          <div class="field">
-            <label>E-Mail *</label>
-            <input type="email" id="f_email" autocomplete="email" required>
-          </div>
-        </div>
-
-        <div class="field">
-          <label>Telefon <span class="hint">(optional, für Rückfragen)</span></label>
-          <input type="tel" id="f_phone" autocomplete="tel">
-        </div>
-
-        <div class="grid2">
-          <div class="field">
-            <label>Hersteller &amp; Gerät *</label>
-            <input type="text" id="f_model" placeholder="z.B. Vaillant ecoTEC plus VC 206/5-5" required>
-          </div>
-          <div class="field">
-            <label>Baujahr <span class="hint">(falls bekannt)</span></label>
-            <input type="text" id="f_year" inputmode="numeric" maxlength="4" pattern="(19|20)[0-9]{2}" title="4-stelliges Baujahr, z.B. 2014" placeholder="z.B. 2014">
-          </div>
-        </div>
-
-        <div class="grid2">
-          <div class="field">
-            <label>Angezeigter Fehlercode *</label>
-            <input type="text" id="f_vin" maxlength="30" placeholder="z.B. F.28, 6A, EA – oder „kein Code“" autocapitalize="characters" spellcheck="false" required>
-          </div>
-          <div class="field">
-            <label>Anlagendruck <span class="hint">(Manometer, falls ablesbar)</span></label>
-            <input type="text" id="f_engine" placeholder="z.B. 1,2 bar">
-          </div>
-        </div>
-
-        <div class="field">
-          <label>Was passiert genau? *</label>
-          <textarea id="f_problem" placeholder="Seit wann? Heizung und/oder Warmwasser betroffen? Geräusche? Schon die Entstörtaste gedrückt? Was hast du schon geprüft?" required></textarea>
-        </div>
-
-        <div class="field">
-          <label>Foto(s) * <span class="hint">(Display mit Fehlercode, Typenschild des Geräts – max. 3 Fotos)</span></label>
-          <div class="file-drop" id="fileDrop" role="button" tabindex="0">📷 Fotos auswählen</div>
-          <input type="file" id="photoInput" accept="image/*" multiple>
-          <div class="thumbs" id="thumbs"></div>
-          <div class="photo-note" id="photoNote"></div>
-        </div>
-
-        <label class="ack-check">
-          <input type="checkbox" id="f_nogas" required>
-          <span>Es riecht <b>nicht</b> nach Gas. (Bei Gasgeruch bitte sofort die Störungsnummer deines Gasnetzbetreibers oder 112 anrufen.) *</span>
-        </label>
-
-<div class="disclaimer">
-          Die Auskunft erfolgt nach bestem Wissen anhand deiner Angaben und Fotos, ohne Gewähr. Sie ersetzt keine Prüfung vor Ort durch einen Fachbetrieb und ist keine Reparaturanleitung. Arbeiten an Gasgeräten und der Gasanlage dürfen nur eingetragene Fachbetriebe ausführen – wir nennen dir nur Schritte, die laut Bedienungsanleitung für Nutzer vorgesehen sind.<br><br>
-          <strong>Geld-zurück-Garantie:</strong> Können wir anhand deiner Angaben nicht weiterhelfen (z.&nbsp;B. weil der Fall zu speziell ist), bekommst du den vollen Betrag zurück – melde dich dazu einfach mit deiner Transaktions-ID bei uns.
-        </div>
-
-        <label class="ack-check">
-          <input type="checkbox" id="f_ack" required>
-          <span>Hinweis oben gelesen und zur Kenntnis genommen. *</span>
-        </label>
-
-        <label class="ack-check">
-          <input type="checkbox" id="f_widerruf" required>
-          <span>Ich verlange ausdrücklich, dass ihr vor Ablauf der Widerrufsfrist mit der Bearbeitung beginnt. Mir ist bekannt, dass mein Widerrufsrecht erlischt, sobald die Auskunft vollständig erbracht ist (<a href="widerruf.html" target="_blank" rel="noopener">Widerrufsbelehrung</a>). *</span>
-        </label>
-
-        <button type="button" id="toStage2" class="cta-btn" style="width:100%">Weiter zur Zahlung</button>
-      </div>
-
-      <div id="stage2">
-        <div class="sum">Paket <strong id="s2plan"></strong> — <strong id="s2price"></strong></div>
-        <p class="s2-note">Endpreis, gem. §&nbsp;19 UStG ohne Umsatzsteuer. Mit Klick auf <strong>„Jetzt kaufen“</strong> bestellst du die Auskunft zahlungspflichtig. Du bekommst direkt danach eine Bestätigung per E-Mail. Auf deinem PayPal-Beleg steht als Empfänger <strong>DP Digital-Service</strong>.</p>
-        <div id="paypal-btn-container"></div>
-        <div class="back-link" id="backToForm">← zurück zum Formular</div>
-      </div>
-    </form>
-
-    <div id="confirmation">
-      <h3>✅ Zahlung erhalten, Anfrage ist bei uns eingegangen</h3>
-      <p id="confirmText"></p>
-      <p style="color:var(--text-dim);font-size:13px">
-        Eine Bestätigung mit allen Angaben geht gleich an deine E-Mail-Adresse (bitte auch im Spam-Ordner schauen).
-        Falls du innerhalb der Frist nichts hörst, melde dich mit deiner Transaktions-ID per E-Mail bei uns.
-      </p>
-    </div>
-  </div>
-</section>
-
 <footer>
   <div class="wrap">
     <div>Heizung-Störung.de — Dominic Pfaue, Anlagenmechaniker SHK</div>
-    <div style="margin-bottom:6px;"><a href="heizung-geht-nicht.html">Heizung geht nicht</a> · <a href="heizung-verliert-druck.html">Heizung verliert Druck</a> · <a href="vaillant-f28.html">Vaillant F.28</a> · <a href="buderus-6a.html">Buderus 6A</a></div>
-    <div><a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a> · <a href="widerruf.html">Widerrufsbelehrung</a> · <a href="mailto:kontakt@heizung-stoerung.de">kontakt@heizung-stoerung.de</a></div>
+    <div><a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a> · <a href="agb.html">AGB</a> · <a href="widerruf.html">Widerrufsbelehrung</a> · <a href="mailto:kontakt@heizung-stoerung.de">kontakt@heizung-stoerung.de</a></div>
   </div>
-</footer>
+<div style="text-align:center;margin:18px 0 6px"><a href="widerrufen.html" style="display:inline-block;padding:9px 18px;border:1.5px solid currentColor;border-radius:999px;font-weight:700;text-decoration:none">Vertrag widerrufen</a></div></footer>
 
 <script src="https://www.paypal.com/sdk/js?client-id=BAAsjVXxgdQBDmmix0nPcFfvPWdEdysRrlNo1NUGm29-Db1CYm8RUYOWF1LtGmYuGYv70AgUrjaHHSVO_o&currency=EUR&locale=de_DE"></script>
-<script>
-/* ============ KONFIGURATION ============ */
-const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbz5uEEaTn5Pe-ec-33u-pvSRlJCKSAYdsRV3CgDyBfdfGwoHiEGjb46DXZIARyjO293aA/exec";
-/* ======================================= */
-
-const PLANS = {
-  basis: { label: "Basis (24 Std.)", price: "9.99" },
-  express: { label: "Express (2 Std.)", price: "19.99" }
-};
-const MAX_PHOTOS = 3;
-let selectedPlan = null;     // { key, price }
-let photos = [];             // [{ dataUrl }]
-let photosChanged = true;    // Fotos seit letzter Sicherung geändert?
-
-function euro(p) { return p.replace('.', ',') + ' €'; }
-function newId() {
-  if (window.crypto && crypto.randomUUID) return crypto.randomUUID();
-  return 'r' + Date.now().toString(36) + Math.random().toString(36).slice(2, 10);
-}
-const requestId = newId();
-
-// --- Herkunft merken (für die Auswertung der Werbung, ohne Cookies) ---
-const quelle = (function () {
-  let q = '';
-  try {
-    const u = new URLSearchParams(location.search);
-    q = u.get('quelle') || u.get('utm_source') || (u.get('gclid') ? 'google-ads' : '');
-    if (!q && document.referrer) {
-      const host = new URL(document.referrer).hostname.replace(/^www\./, '');
-      if (host && host !== location.hostname.replace(/^www\./, '')) q = host;
-    }
-    if (q) sessionStorage.setItem('tns_quelle', q.slice(0, 60));
-    else q = sessionStorage.getItem('tns_quelle') || '';
-  } catch (e) {}
-  return q || 'direkt';
-})();
-
-// --- Trichter: anonym zählen, bis zu welchem Schritt ein Besuch kommt (keine Eingaben, keine Cookies) ---
-const visitId = newId();
-const funnelSent = {};
-function funnel(step) {
-  if (funnelSent[step] || navigator.webdriver) return;
-  funnelSent[step] = true;
-  try {
-    fetch(APPS_SCRIPT_URL, {
-      method: 'POST', mode: 'no-cors', keepalive: true,
-      headers: { 'Content-Type': 'text/plain;charset=utf-8' },
-      body: JSON.stringify({ kind: 'funnel', service: 'heizung', visit: visitId, step, quelle,
-        plan: selectedPlan ? selectedPlan.key : '',
-        device: window.matchMedia && matchMedia('(max-width: 700px)').matches ? 'mobil' : 'desktop' })
-    }).catch(() => {});
-  } catch (e) {}
-}
-funnel('1 Seite geöffnet');
-try {
-  const pk = document.getElementById('pakete');
-  if (pk && 'IntersectionObserver' in window) {
-    const io = new IntersectionObserver(es => {
-      if (es.some(x => x.isIntersecting)) { funnel('1b Preise gesehen'); io.disconnect(); }
-    }, { threshold: 0.2 });
-    io.observe(pk);
-  }
-} catch (e) {}
-
-// --- Live/Offline-Status je nach Servicezeiten (8–20 Uhr, deutsche Zeit) ---
-function updateStatusBadge() {
-  const badge = document.getElementById('statusBadge');
-  const text = document.getElementById('statusText');
-  const hour = parseInt(new Intl.DateTimeFormat('de-DE', { timeZone: 'Europe/Berlin', hour: '2-digit', hour12: false }).format(new Date()), 10);
-  const online = hour >= 8 && hour < 20;
-  badge.classList.toggle('online', online);
-  badge.classList.toggle('offline', !online);
-  text.textContent = online ? 'Live – wir bearbeiten gerade Anfragen' : 'Offline – Fristen starten wieder ab 8:00 Uhr';
-}
-updateStatusBadge();
-setInterval(updateStatusBadge, 60000);
-
-// --- Paketwahl: Karten oben UND Auswahl im Formular sind immer synchron ---
-function selectPlan(key) {
-  if (!PLANS[key]) return;
-  selectedPlan = { key, price: PLANS[key].price };
-  document.querySelectorAll('.plan').forEach(c => {
-    const on = c.dataset.plan === key;
-    c.classList.toggle('selected', on);
-    c.querySelector('input[type=radio]').checked = on;
-  });
-  document.querySelectorAll('.pp').forEach(b => {
-    const on = b.dataset.plan === key;
-    b.classList.toggle('selected', on);
-    b.setAttribute('aria-checked', on ? 'true' : 'false');
-  });
-  document.getElementById('planField').classList.remove('need');
-}
-document.querySelectorAll('.plan').forEach(card => card.addEventListener('click', () => { selectPlan(card.dataset.plan); funnel('2 Paket gewählt'); }));
-document.querySelectorAll('.pp').forEach(btn => btn.addEventListener('click', () => { selectPlan(btn.dataset.plan); funnel('2 Paket gewählt'); }));
-try { const p = new URLSearchParams(location.search).get('paket'); if (p) selectPlan(p); } catch (e) {}
-
-// --- Fotos: Vorschau, Entfernen, max. 3, Komprimierung im Browser ---
-const fileDrop = document.getElementById('fileDrop');
-const photoInput = document.getElementById('photoInput');
-const thumbs = document.getElementById('thumbs');
-const photoNote = document.getElementById('photoNote');
-fileDrop.addEventListener('click', () => photoInput.click());
-fileDrop.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); photoInput.click(); } });
-
-function note(msg, warn) { photoNote.textContent = msg || ''; photoNote.classList.toggle('warn', !!warn); }
-
-function renderPhotos() {
-  thumbs.innerHTML = '';
-  photos.forEach((p, i) => {
-    const d = document.createElement('div'); d.className = 'thumb';
-    const img = document.createElement('img'); img.src = p.dataUrl; img.alt = 'Foto ' + (i + 1);
-    const x = document.createElement('button'); x.type = 'button'; x.textContent = '×'; x.setAttribute('aria-label', 'Foto ' + (i + 1) + ' entfernen');
-    x.addEventListener('click', () => { photos.splice(i, 1); photosChanged = true; renderPhotos(); note(''); });
-    d.append(img, x); thumbs.appendChild(d);
-  });
-  const n = photos.length;
-  fileDrop.classList.toggle('has-files', n > 0);
-  fileDrop.textContent = n === 0 ? '📷 Fotos auswählen' : (n < MAX_PHOTOS ? `✅ ${n} Foto(s) – weitere hinzufügen` : `✅ ${n} Fotos ausgewählt (Maximum)`);
-}
-
-photoInput.addEventListener('change', async () => {
-  const files = Array.from(photoInput.files || []);
-  photoInput.value = '';
-  if (!files.length) return; // Auswahl abgebrochen -> nichts ändern
-  const free = MAX_PHOTOS - photos.length;
-  if (free <= 0) { note('Es sind schon 3 Fotos ausgewählt. Entferne eins, um ein anderes hinzuzufügen.', true); return; }
-  const take = files.slice(0, free);
-  fileDrop.textContent = 'Fotos werden verarbeitet…';
-  let failed = 0;
-  for (const f of take) {
-    try { photos.push({ dataUrl: await compressImage(f, 1400, 0.72) }); photosChanged = true; funnel('4 Foto hinzugefügt'); }
-    catch (e) { failed++; }
-  }
-  renderPhotos();
-  const msgs = [];
-  if (files.length > take.length) msgs.push(`Es werden maximal ${MAX_PHOTOS} Fotos übernommen.`);
-  if (failed) msgs.push(failed === 1 ? 'Ein Foto konnte nicht gelesen werden – bitte als JPG oder PNG versuchen.' : failed + ' Fotos konnten nicht gelesen werden – bitte als JPG oder PNG versuchen.');
-  note(msgs.join(' '), msgs.length > 0);
-});
-
-function compressImage(file, maxDim, quality) {
-  return new Promise((resolve, reject) => {
-    const img = new Image();
-    const reader = new FileReader();
-    const timer = setTimeout(() => reject(new Error('timeout')), 20000);
-    reader.onload = e => { img.src = e.target.result; };
-    reader.onerror = () => { clearTimeout(timer); reject(new Error('read')); };
-    img.onerror = () => { clearTimeout(timer); reject(new Error('decode')); };
-    img.onload = () => {
-      clearTimeout(timer);
-      let { width, height } = img;
-      if (width > maxDim || height > maxDim) {
-        const scale = maxDim / Math.max(width, height);
-        width = Math.round(width * scale); height = Math.round(height * scale);
-      }
-      const canvas = document.createElement('canvas');
-      canvas.width = width; canvas.height = height;
-      canvas.getContext('2d').drawImage(img, 0, 0, width, height);
-      resolve(canvas.toDataURL('image/jpeg', quality));
-    };
-    reader.readAsDataURL(file);
-  });
-}
-
-// --- Daten sammeln + an das Backend schicken ---
-function formData() {
-  const v = id => document.getElementById(id).value.trim();
-  return {
-    requestId, quelle, service: 'heizung',
-    timestamp: new Date().toISOString(),
-    plan: selectedPlan.key, price: selectedPlan.price,
-    name: v('f_name'), email: v('f_email'), phone: v('f_phone'),
-    model: v('f_model'), year: v('f_year'), vin: v('f_vin').toUpperCase(), engine: v('f_engine'),
-    problem: v('f_problem')
-  };
-}
-function post(payload) {
-  // no-cors: Apps Script sendet keine CORS-Header; die Antwort ist nicht lesbar, der Request kommt aber an.
-  return fetch(APPS_SCRIPT_URL, {
-    method: 'POST', mode: 'no-cors', keepalive: false,
-    headers: { 'Content-Type': 'text/plain;charset=utf-8' },
-    body: JSON.stringify(payload)
-  });
-}
-
-// --- Validierung + Wechsel zur Zahlung ---
-const form = document.getElementById('reqform');
-const errorBox = document.getElementById('errorBox');
-form.addEventListener('input', () => funnel('3 Formular begonnen'));
-
-document.getElementById('toStage2').addEventListener('click', () => {
-  errorBox.style.display = 'none';
-  if (!selectedPlan) {
-    document.getElementById('planField').classList.add('need');
-    return showError('Bitte wähle oben im Formular ein Paket aus.');
-  }
-  if (!form.checkValidity()) { form.reportValidity(); return; }
-  if (photos.length === 0) return showError('Bitte mindestens ein Foto hochladen.');
-  funnel('5 Weiter zur Zahlung');
-
-  // Formular vor der Zahlung sichern (Fotos nur, wenn sie sich geändert haben)
-  const payload = Object.assign({ kind: 'request' }, formData(), { photos: photosChanged ? photos.map(p => p.dataUrl) : [] });
-  post(payload).then(() => { photosChanged = false; }).catch(err => console.error('Sicherung fehlgeschlagen', err));
-
-  document.getElementById('stage1').style.display = 'none';
-  document.getElementById('stage2').style.display = 'block';
-  document.getElementById('s2plan').textContent = PLANS[selectedPlan.key].label;
-  document.getElementById('s2price').textContent = euro(selectedPlan.price);
-  renderPaypalButton();
-  document.getElementById('anfrage').scrollIntoView({ behavior: 'smooth' });
-});
-
-document.getElementById('backToForm').addEventListener('click', () => {
-  document.getElementById('stage2').style.display = 'none';
-  document.getElementById('stage1').style.display = 'block';
-});
-
-function showError(msg) {
-  errorBox.textContent = msg;
-  errorBox.style.display = 'block';
-  errorBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
-}
-
-// --- PayPal-Button (wird einmal gerendert und bleibt erhalten, auch nach "zurück") ---
-let paypalRendered = false;
-function renderPaypalButton() {
-  if (paypalRendered) return;
-  if (typeof paypal === 'undefined') { showError('Die Zahlungsfunktion konnte nicht geladen werden. Bitte Seite neu laden oder Werbeblocker kurz deaktivieren.'); return; }
-  paypalRendered = true;
-  paypal.Buttons({
-    style: { layout: 'vertical', color: 'gold', shape: 'pill', label: 'buynow' },
-    createOrder: (data, actions) => (funnel('6 PayPal geöffnet'), actions.order.create({
-      purchase_units: [{
-        amount: { value: selectedPlan.price, currency_code: 'EUR' },
-        description: 'Heizung-Störung.de – Paket ' + PLANS[selectedPlan.key].label,
-        custom_id: requestId
-      }]
-    })),
-    onApprove: async (data, actions) => {
-      const order = await actions.order.capture();
-      await submitPaid(order);
-    },
-    onError: (err) => {
-      console.error(err);
-      paypalRendered = false;
-      document.getElementById('paypal-btn-container').innerHTML = '';
-      showError('Bei der Zahlung ist ein Fehler aufgetreten. Es wurde nichts abgebucht – bitte versuch es erneut.');
-      renderPaypalButton();
-    }
-  }).render('#paypal-btn-container');
-}
-
-// --- Nach der Zahlung: Anfrage als bezahlt melden (inkl. aller Daten als Rückfallebene) ---
-async function submitPaid(order) {
-  funnel('7 Bezahlt');
-  const payload = Object.assign({ kind: 'paid' }, formData(), {
-    photos: photos.map(p => p.dataUrl),
-    paypalOrderId: order.id,
-    paypalPayerEmail: (order.payer && order.payer.email_address) || ''
-  });
-  let sent = false;
-  for (let i = 0; i < 3 && !sent; i++) {
-    try { await post(payload); sent = true; }
-    catch (e) { console.error('Übertragung fehlgeschlagen, neuer Versuch', e); await new Promise(r => setTimeout(r, 1500)); }
-  }
-
-  document.getElementById('stage2').style.display = 'none';
-  document.getElementById('confirmation').style.display = 'block';
-  const t = document.getElementById('confirmText');
-  t.textContent = '';
-  t.append('Paket ', Object.assign(document.createElement('strong'), { textContent: PLANS[selectedPlan.key].label }),
-    ' · Transaktions-ID: ', Object.assign(document.createElement('strong'), { textContent: order.id }),
-    document.createElement('br'), 'Antwort geht an ' + payload.email + '.');
-    if (!sent) t.append(document.createElement('br'), 'Hinweis: Die Übertragung war gestört. Bitte schick uns kurz deine Transaktions-ID per E-Mail, damit nichts verloren geht.');
-  document.getElementById('confirmation').scrollIntoView({ behavior: 'smooth' });
-}
-</script>
+<script src="app.js"></script>
 </body>
 </html>
