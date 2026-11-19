@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Heizung zeigt Fehlercode? Hilfe vom Heizungsfachmann | Heizung-Störung.de</title>
-<meta name="description" content="Fehlercode an Therme oder Heizung (z. B. Vaillant F.28, Buderus 6A, Junkers EA)? Foto schicken – ein Heizungsfachmann sagt dir, was los ist, was du selbst sicher tun kannst und wann ein Monteur nötig ist. Persönliche Auskunft 14,90 €.">
+<meta name="description" content="Fehlercode an Therme oder Heizung (z. B. Vaillant F.28, Buderus 6A, Junkers EA)? Foto schicken – ein Heizungsfachmann sagt dir, was los ist, welche Ursachen in Frage kommen und welches Ersatzteil passt. Persönliche Auskunft 14,90 €.">
 <meta name="robots" content="noindex,nofollow"><!-- ENTWURF: vor Livegang entfernen -->
 <link rel="canonical" href="https://heizung-stoerung.de/">
 <link rel="icon" type="image/png" href="favicon-64.png">
@@ -13,7 +13,7 @@
 <meta property="og:locale" content="de_DE">
 <meta property="og:url" content="https://heizung-stoerung.de/">
 <meta property="og:title" content="Heizung zeigt Fehlercode? Hilfe vom Heizungsfachmann">
-<meta property="og:description" content="Foto vom Display schicken – du erfährst, was der Code bedeutet, was du selbst sicher tun kannst und wann ein Monteur nötig ist.">
+<meta property="og:description" content="Foto vom Display schicken – du erfährst, was der Code bedeutet und welche Ursachen in Frage kommen.">
 <style>
   :root{
     --bg:#0f1115; --bg-alt:#161923; --card:#1b1f2b; --border:#2a2f3d;
@@ -171,6 +171,8 @@
   .field.need .anliegen{outline:2px solid #a33;outline-offset:4px;border-radius:10px}
   .field select{width:100%;background:var(--bg-alt);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:11px 13px;font-size:15px;font-family:inherit}
   @media (max-width:760px){.topbar a.small{display:none}.check-row{grid-template-columns:1fr 1fr}.check-row .go{grid-column:1/-1}.offer,.anliegen{grid-template-columns:1fr}}
+  .codes{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+  .codes a{background:var(--card);border:1px solid var(--border);border-radius:999px;padding:7px 12px;font-size:14px;text-decoration:none;color:var(--text)}
 </style>
 </head>
 <body>
@@ -179,8 +181,8 @@
   <div class="wrap">
     <div class="topbar"><div class="logo">Heizung-<span>Störung</span>.de</div><a class="small" href="#anfrage">Persönlich fragen</a></div>
     <h1>Heizung zeigt einen Fehler?</h1>
-    <p class="sub">Foto vom Display und Typenschild schicken – ein Heizungsfachmann sagt dir, was der Fehler bedeutet, was du selbst sicher tun kannst und welches Ersatzteil passt.</p>
-    <div class="usp"><span>💶 14,90 € pro Anfrage</span><span>🔧 vom SHK-Kundendienst-Profi</span><span>⏱ Antwort in 24 Std.</span><span>✅ Geld zurück, wenn wir nicht helfen können</span></div>
+    <p class="sub">Foto vom Display und Typenschild schicken – ein Heizungsfachmann sagt dir, was der Fehler bedeutet, welche Ursache wahrscheinlich ist und welches Ersatzteil passt.</p>
+    <div class="usp"><span>💶 14,90 € pro Anfrage</span><span>🔧 vom SHK-Kundendienst-Profi</span><span>⏱ Antwort in 24 Std.</span><span>✅ Volle Erstattung, falls keine Einschätzung möglich</span></div>
     <a href="#anfrage" class="cta-btn">Jetzt Fehler klären lassen</a>
     <div style="margin-top:12px;"><a href="#beispiel" class="sec-link">So sieht eine Antwort aus ↓</a></div>
     <div class="gaswarn" style="max-width:620px;margin:18px auto 0;text-align:left">⚠️ <b>Riecht es nach Gas?</b> Kein Licht- oder Klingelschalter betätigen, Fenster öffnen, Gebäude verlassen und von draußen die <b>Störungsnummer deines Gasnetzbetreibers</b> oder <b>112</b> anrufen.</div>
@@ -192,15 +194,15 @@
     <h2>Persönliche Auskunft vom Heizungsfachmann</h2>
     <p class="lead">Du schickst Fotos von Display und Typenschild und beschreibst kurz, was los ist. Ein SHK-Kundendiensttechniker schaut sich deinen Fall an und antwortet dir schriftlich per E-Mail.</p>
     <div class="offer">
-      <div class="card"><h3>🔥 Störung klären</h3><p>Was der Fehler bei deinem Gerät bedeutet, wie wahrscheinlich welche Ursache ist, was du gefahrlos selbst tun kannst und was du dem Monteur sagst.</p></div>
-      <div class="card"><h3>🔩 Ersatzteil bestimmen</h3><p>Welches Teil zu deinem Gerät passt – mit Teilenummer, wo verfügbar – damit der Monteur gleich das Richtige mitbringt oder du es bestellen kannst.</p></div>
+      <div class="card"><h3>🔥 Störung klären</h3><p>Was der Fehler bei deinem Gerät bedeutet, welche Ursachen in Frage kommen und was geprüft werden sollte – als Information für dich und deinen Fachbetrieb.</p></div>
+      <div class="card"><h3>🔩 Ersatzteil bestimmen</h3><p>Welches Teil zu deinem Gerät passt – mit Teilenummer, wo verfügbar.</p></div>
     </div>
     <div class="pricebox">
       <div><div class="p"><span class="js-preis">14,90</span>&nbsp;€</div><div style="color:var(--text-dim);font-size:13px">Endpreis, gem. §&nbsp;19 UStG ohne USt.</div></div>
       <ul>
         <li>Antwort innerhalb von 24 Stunden (Servicezeit 8–20 Uhr)</li>
         <li>Keine Registrierung, kein Abo, Zahlung per PayPal</li>
-        <li>Können wir nicht helfen: Geld zurück</li>
+        <li>Ist keine Einschätzung möglich, erstatten wir den vollen Betrag</li>
       </ul>
       <a href="#anfrage" class="cta-btn">Jetzt anfragen</a>
     </div>
@@ -214,12 +216,13 @@
       <div class="mail-q"><strong>Anfrage:</strong> Vaillant ecoTEC plus, Display zeigt <b>F.28</b>, Heizung und Warmwasser bleiben kalt. Druck 1,5 bar.</div>
       <div class="mail-a">
         <p>• <b>Bedeutung:</b> F.28 heißt „Zündung beim Start erfolglos“ – die Therme hat beim Anlauf keine Flamme erkannt und sich aus Sicherheitsgründen abgeschaltet.</p>
-        <p>• <b>Das kannst du sicher selbst prüfen:</b> Ist der Gashahn unter dem Gerät offen? Funktionieren andere Gasgeräte (z. B. Herd)? Wurde kürzlich der Gaszähler getauscht? Danach einmal die Entstörtaste drücken.</p>
-        <p>• <b>Kommt F.28 wieder:</b> Dann bitte den Fachbetrieb rufen. Häufige Ursachen bei diesem Gerät: verschlissene oder verschmutzte Zünd-/Überwachungselektrode, verstopfter Kondensatablauf, seltener die Gasarmatur. Sag dem Monteur „F.28 nach Entstörung wiederholt“ – das spart Suchzeit.</p>
+        <p>• <b>Was geprüft werden sollte:</b> Gaszufuhr (Gashahn, funktionieren andere Gasgeräte, gab es kürzlich einen Zählerwechsel?) und Stromversorgung.</p>
+        <p>• <b>Wahrscheinliche Ursachen bei diesem Gerät:</b> verschlissene oder verschmutzte Zünd-/Überwachungselektrode, verstopfter Kondensatablauf, seltener die Gasarmatur.</p>
+        <p>• <b>Für den Fachbetrieb:</b> Hinweis „F.28 tritt wiederholt auf“ – das spart Suchzeit.</p>
         <p>• <b>Ersatzteil:</b> passende Elektrode mit Teilenummer für dein Gerät.</p>
       </div>
     </div>
-    <p class="lead" style="margin-top:12px;font-size:13.5px;">Beispiel zur Veranschaulichung. Jede Antwort wird persönlich für dein Gerät erstellt. Arbeiten an der Gasanlage gehören immer in die Hand eines Fachbetriebs – wir sagen dir nur, was du laut Bedienungsanleitung selbst tun darfst.</p>
+    <p class="lead" style="margin-top:12px;font-size:13.5px;">Beispiel zur Veranschaulichung. Jede Antwort wird persönlich für dein Gerät erstellt. Du bekommst eine Einschätzung, keine Anleitung – Arbeiten am Gerät und an der Gasanlage gehören in die Hand eines Fachbetriebs.</p>
   </div>
 </section>
 
@@ -296,8 +299,8 @@
         </label>
 
         <div class="disclaimer">
-          Die Auskunft erfolgt nach bestem Wissen anhand deiner Angaben und Fotos. Sie ersetzt keine Prüfung vor Ort durch einen Fachbetrieb und ist keine Reparaturanleitung. Arbeiten an Gasgeräten und an der Gasanlage dürfen nur eingetragene Fachbetriebe ausführen – wir nennen dir nur Schritte, die laut Bedienungsanleitung für Nutzer vorgesehen sind.<br><br>
-          <strong>Geld zurück:</strong> Können wir anhand deiner Angaben nicht weiterhelfen (z.&nbsp;B. weil der Fall zu speziell ist), bekommst du den vollen Betrag zurück.
+          Die Auskunft ist eine Einschätzung anhand deiner Angaben und Fotos. Sie ersetzt keine Prüfung vor Ort durch einen Fachbetrieb und ist keine Anleitung zur Prüfung oder Reparatur. Arbeiten am Gerät und an der Gasanlage gehören in die Hand eines Fachbetriebs.<br><br>
+          <strong>Volle Erstattung:</strong> Lässt sich dein Fall anhand der Angaben nicht einschätzen (z.&nbsp;B. weil er zu speziell ist), erstatten wir dir den vollen Betrag.
         </div>
 
         <label class="ack-check">
@@ -343,12 +346,7 @@
   </div>
 </section>
 
-<footer>
-  <div class="wrap">
-    <div>Heizung-Störung.de — Dominic Pfaue, Anlagenmechaniker SHK</div>
-    <div><a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a> · <a href="agb.html">AGB</a> · <a href="widerruf.html">Widerrufsbelehrung</a> · <a href="mailto:kontakt@heizung-stoerung.de">kontakt@heizung-stoerung.de</a></div>
-  </div>
-<div style="text-align:center;margin:18px 0 6px"><a href="widerrufen.html" style="display:inline-block;padding:9px 18px;border:1.5px solid currentColor;border-radius:999px;font-weight:700;text-decoration:none">Vertrag widerrufen</a></div></footer>
+<footer style="margin-top:40px;padding:22px 16px 28px;border-top:1px solid #2a2f3d;text-align:center;font-size:12.5px;color:#8a91a3;line-height:1.9"><div><a href="impressum.html" style="color:#8a91a3;text-decoration:none;margin:0">Impressum</a> · <a href="datenschutz.html" style="color:#8a91a3;text-decoration:none;margin:0">Datenschutz</a> · <a href="agb.html" style="color:#8a91a3;text-decoration:none;margin:0">AGB</a> · <a href="widerruf.html" style="color:#8a91a3;text-decoration:none;margin:0">Widerrufsbelehrung</a> · <a href="mailto:kontakt@heizung-stoerung.de" style="color:#8a91a3;text-decoration:none;margin:0">Kontakt</a></div><div>© 2026 Heizung-Störung.de · Dominic Pfaue</div><a href="widerrufen.html" style="display:inline-block;margin-top:8px;padding:3px 12px;border:1px solid #3a4052;border-radius:999px;color:#a4abbd;text-decoration:none;font-size:12px">Vertrag widerrufen</a></footer>
 
 <script src="https://www.paypal.com/sdk/js?client-id=BAAsjVXxgdQBDmmix0nPcFfvPWdEdysRrlNo1NUGm29-Db1CYm8RUYOWF1LtGmYuGYv70AgUrjaHHSVO_o&currency=EUR&locale=de_DE"></script>
 <script src="app.js"></script>
