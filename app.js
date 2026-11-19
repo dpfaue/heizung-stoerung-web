@@ -143,6 +143,51 @@ function compressImage(file, maxDim, quality) {
   });
 }
 
+/* ---------- Video (freiwillig): ein kurzes Video, max. 24 MB, wird nach der Formular-Sicherung separat übertragen ---------- */
+const VIDEO_MAX = 24 * 1024 * 1024;
+let video = null;          // { file, dataUrl }
+let videoSent = false;
+const videoDrop = document.getElementById('videoDrop');
+const videoInput = document.getElementById('videoInput');
+const videoNote = document.getElementById('videoNote');
+const videoStatus = document.getElementById('videoStatus');
+function mb(n) { return (n / 1048576).toFixed(1).replace('.', ',') + ' MB'; }
+function vnote(msg, warn) { videoNote.textContent = msg || ''; videoNote.classList.toggle('warn', !!warn); }
+function renderVideo() {
+  videoDrop.classList.toggle('has-files', !!video);
+  videoDrop.textContent = video ? '✅ Video ausgewählt (' + mb(video.file.size) + ') – antippen zum Ändern' : '🎥 Video auswählen';
+  if (video) {
+    const x = el('button', 'Video entfernen'); x.type = 'button'; x.className = 'back-link'; x.style.cssText = 'background:none;border:0;padding:0;margin-top:6px;font-family:inherit';
+    x.addEventListener('click', () => { video = null; videoSent = false; renderVideo(); vnote(''); });
+    videoNote.textContent = ''; videoNote.appendChild(x);
+  }
+}
+videoDrop.addEventListener('click', () => videoInput.click());
+videoDrop.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); videoInput.click(); } });
+videoInput.addEventListener('change', () => {
+  const f = (videoInput.files || [])[0];
+  videoInput.value = '';
+  if (!f) return;
+  if (!/^video\//.test(f.type || '')) { vnote('Das ist keine Videodatei.', true); return; }
+  if (f.size > VIDEO_MAX) { vnote('Das Video ist zu groß (' + mb(f.size) + '). Bitte kürzer aufnehmen – etwa 10–15 Sekunden reichen – oder in geringerer Auflösung (nicht 4K).', true); return; }
+  videoDrop.textContent = 'Video wird vorbereitet…';
+  const r = new FileReader();
+  r.onload = () => { video = { file: f, dataUrl: String(r.result) }; videoSent = false; funnel('4b Video hinzugefügt'); renderVideo(); };
+  r.onerror = () => { video = null; renderVideo(); vnote('Das Video konnte nicht gelesen werden.', true); };
+  r.readAsDataURL(f);
+});
+async function sendVideo() {
+  if (!video || videoSent) return;
+  videoStatus.textContent = '🎥 Video wird übertragen … bitte Seite geöffnet lassen.';
+  try {
+    await post({ kind: 'video', requestId, video: video.dataUrl });
+    videoSent = true;
+    videoStatus.textContent = '✅ Video übertragen.';
+  } catch (e) {
+    videoStatus.textContent = '⚠️ Video konnte nicht übertragen werden. Deine Anfrage kommt trotzdem an – Fotos reichen meist aus.';
+  }
+}
+
 /* ---------- Daten sammeln + an das Backend schicken (gleiches Format wie bisher) ---------- */
 function formData() {
   const v = id => document.getElementById(id).value.trim();
@@ -177,7 +222,7 @@ document.getElementById('toStage2').addEventListener('click', () => {
   if (photos.length === 0) return showError('Bitte mindestens ein Foto hochladen (Display oder Typenschild).');
   funnel('5 Weiter zur Zahlung');
   const payload = Object.assign({ kind: 'request' }, formData(), { photos: photosChanged ? photos.map(p => p.dataUrl) : [] });
-  post(payload).then(() => { photosChanged = false; }).catch(err => console.error('Sicherung fehlgeschlagen', err));
+  post(payload).then(() => { photosChanged = false; return sendVideo(); }).catch(err => console.error('Sicherung fehlgeschlagen', err));
   document.getElementById('stage1').style.display = 'none';
   document.getElementById('stage2').style.display = 'block';
   renderPaypalButton();

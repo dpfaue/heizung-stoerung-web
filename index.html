@@ -82,7 +82,7 @@
   .file-drop{border:1.5px dashed var(--border);border-radius:10px;padding:18px;text-align:center;
     color:var(--text-dim);font-size:14px;cursor:pointer;}
   .file-drop.has-files{border-color:var(--ok);color:var(--ok);}
-  #photoInput{display:none;}
+  #photoInput,#videoInput{display:none;}
   .disclaimer{font-size:12.5px;color:var(--text-dim);background:var(--bg-alt);border-radius:8px;
     padding:12px 14px;margin:20px 0;}
   .ack-check{display:flex;align-items:flex-start;gap:10px;font-size:13.5px;color:var(--text-dim);margin:-6px 0 20px;cursor:pointer;}
@@ -282,6 +282,13 @@
           <div class="photo-note" id="photoNote"></div>
         </div>
 
+        <div class="field">
+          <label>Video <span class="hint">(freiwillig – z. B. ein Geräusch oder der Startvorgang, ca. 10–15 Sekunden, max. 24 MB)</span></label>
+          <div class="file-drop" id="videoDrop" role="button" tabindex="0">🎥 Video auswählen</div>
+          <input type="file" id="videoInput" accept="video/*">
+          <div class="photo-note" id="videoNote"></div>
+        </div>
+
         <div class="grid2">
           <div class="field">
             <label for="f_name">Name *</label>
@@ -319,6 +326,7 @@
       <div id="stage2">
         <div class="sum">Persönliche Auskunft — <strong><span class="js-preis">14,90</span>&nbsp;€</strong></div>
         <p class="s2-note">Endpreis, gem. §&nbsp;19 UStG ohne Umsatzsteuer. Mit Klick auf <strong>„Jetzt kaufen“</strong> bestellst du die Auskunft zahlungspflichtig. Du bekommst direkt danach eine Bestätigung per E-Mail. Auf deinem PayPal-Beleg steht als Empfänger <strong>DP Digital-Service</strong>.</p>
+        <div class="photo-note" id="videoStatus" style="margin:-8px auto 14px;max-width:420px"></div>
         <div id="paypal-btn-container"></div>
         <div class="back-link" id="backToForm">← zurück zum Formular</div>
       </div>
