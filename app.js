@@ -1,6 +1,6 @@
 /* ============ KONFIGURATION (alles an einer Stelle) ============ */
 const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbz5uEEaTn5Pe-ec-33u-pvSRlJCKSAYdsRV3CgDyBfdfGwoHiEGjb46DXZIARyjO293aA/exec";
-const PREIS = "14.90";          // Endpreis in Euro (Backend: MARKEN.heizung.preise.basis muss gleich sein)
+const PREIS = "9.90";          // Endpreis in Euro (Backend: MARKEN.heizung.preise.basis muss gleich sein)
 const PLAN = "basis";           // ein Angebot, Antwort binnen 24 Std. (Servicezeit 8–20 Uhr)
 /* ============================================================== */
 
